@@ -15,11 +15,13 @@ AUTEUR validates creative decisions through sanitiser.py and produces ShotSpec â
 | **auteur** (0xAUTEUR) | `0x4473350125F66FC17988589A9a948514866bfdE3` | Payment + receipting. deposit(), spend(), getLog() |
 | **auteuragent** (ERC-8183) | `0xc7cAF559a5cF8a3C85cA9acEE4A0010e666871B3` | Agentic commerce. createJob(), fundJob(), submitWork(), completeJob() |
 | **0xAUTEUR Shot** (Rare Protocol ERC-721) | `0x24D258b4249051Dbfa06b1526Bf847062562f126` | Minted via Rare Protocol factory. NFTs with IPFS metadata |
+| **Rare Auction** | `0x1f0c946f0ee87acb268d50ede6c9b4d010af65d2` | Auction contract for bid-responsive recomposition |
 
 ### Explorer Links
 - [0xAUTEUR.sol](https://sepolia.basescan.org/address/0x4473350125F66FC17988589A9a948514866bfdE3)
 - [AuteurAgent.sol](https://sepolia.basescan.org/address/0xc7cAF559a5cF8a3C85cA9acEE4A0010e666871B3)
 - [0xAUTEUR Shot NFT (Rare)](https://sepolia.basescan.org/address/0x24D258b4249051Dbfa06b1526Bf847062562f126)
+- [Rare Auction](https://sepolia.basescan.org/address/0x1f0c946f0ee87acb268d50ede6c9b4d010af65d2)
 
 ## Deploy Transactions
 
@@ -31,6 +33,7 @@ AUTEUR validates creative decisions through sanitiser.py and produces ShotSpec â
 | Deploy ShotNFT (legacy, replaced by Rare) | `0x7178771e0d6b6aa57a049e358987f87f0f96fecd90c2deea216be2fe312f0c55` |
 | **Rare Protocol: Deploy 0xAUTEUR Shot** | `0xabcb70f51642204176d79eb51c4fbf1064dc9bbd1f1f02548a69fc305b7cc9ce` |
 | **Rare Protocol: Auction create** | `0xadc2100fa274949300ea422cc8baf9367cf748578d242e9cdc90d1f4f9bc56e8` |
+| **Synthesis Registration** | `0xba9f8cc02c561d19d875e31bdb2a0d790f5aecf8466a20e245cece0996344ed1` |
 
 ## Rare Protocol Integration
 
@@ -100,10 +103,28 @@ Complete lifecycle via the AuteurAgent contract:
 5. Bid-triggered recomposition: tension 0.50 -> 0.65, new mint [TX 0xf5e7...7c1d](https://sepolia.basescan.org/tx/0xf5e702a253d4fc90e1792f1897bef4d65b44dc36b1dd4d32d784637c72b97c1d)
 6. ERC-8183 agent-to-agent: [createJob TX 0xdf4b...eb1a](https://sepolia.basescan.org/tx/0xdf4bcc236ebffb93c5f59c41b6a21bc36ba63e66c5dda330ad87e3d00e89eb1a)
 
+## AUTEUR MCP Server (Railway)
+
+The AUTEUR MCP server is publicly deployed and reachable for any MCP-compatible client:
+
+- **Endpoint**: `https://auteur-mcp-production.up.railway.app/mcp`
+- **Transport**: Streamable HTTP
+- **Railway Project**: `auteur-mcp` (107fcd42)
+
+### KIE Model Configuration
+
+| Role | Model | KIE API ID |
+|------|-------|------------|
+| Main Image | Nano Banana 2 | `nano-banana-2` |
+| Main Video | Kling 3.0 | `kling-3.0` |
+| Judge Image | Qwen Image 2.0 | `qwen-image-2` |
+| Judge Video | Seedance 1.5 Pro | `seedance-1-5-pro` |
+
 ## Architecture
 
 ```
-Brief -> AUTEUR MCP -> ShotSpec -> Rare Protocol CLI -> IPFS Pin (Filebase) -> NFT Mint
+Brief -> AUTEUR MCP (Railway) -> ShotSpec -> Rare Protocol CLI -> IPFS Pin (Filebase) -> NFT Mint
+                              https://auteur-mcp-production.up.railway.app/mcp
                                                                       |
                                                           0xAUTEUR spend() -> SpendReceipt
                                                                       |
