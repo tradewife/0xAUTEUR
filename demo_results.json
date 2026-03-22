@@ -1,0 +1,52 @@
+{
+  "shot_spec_1": {
+    "shot_id": "882ea33498451d98",
+    "brief": "a woman pressing her palm flat against cold glass, not looking at the man behind it. Warm amber key light.",
+    "beat_position": 1,
+    "tension_level": 0.5,
+    "scene_description": "a woman pressing her palm flat against cold glass, not looking at the man behind it. Warm amber key light.",
+    "dp_blend": "arri_logc_to_rec709",
+    "meisner_note": "Beat 1: emotional truth from brief",
+    "composition_id": "882ea334",
+    "timestamp": 1774190220,
+    "camera": {
+      "movement": "static",
+      "angle": "eye_level",
+      "lens": "35mm"
+    },
+    "lighting": {
+      "key_temp": "5600K",
+      "ratio": 5.0,
+      "motivation": "practical"
+    },
+    "ipfs_cid": "QmQo8U82eECRt5fPEB7sw3Bi7jRo91UVxHTkfSoeqs3QLJ"
+  },
+  "ipfs_cid_1": "QmQo8U82eECRt5fPEB7sw3Bi7jRo91UVxHTkfSoeqs3QLJ",
+  "mint_tx_1": "0x63fe57a1c9e07c87371fd644b7bd558bf034f6011105f5f0240da25a4c0d1e41",
+  "shot_spec_2": {
+    "shot_id": "2858e0b93d1b69c0",
+    "brief": "a woman pressing her palm flat against cold glass, not looking at the man behind it. Warm amber key light.",
+    "beat_position": 2,
+    "tension_level": 0.65,
+    "scene_description": "a woman pressing her palm flat against cold glass, not looking at the man behind it. Warm amber key light.",
+    "dp_blend": "arri_logc_to_rec709",
+    "meisner_note": "Beat 2: emotional truth from brief",
+    "composition_id": "2858e0b9",
+    "timestamp": 1774190226,
+    "camera": {
+      "movement": "static",
+      "angle": "eye_level",
+      "lens": "35mm"
+    },
+    "lighting": {
+      "key_temp": "3200K",
+      "ratio": 5.9,
+      "motivation": "practical"
+    },
+    "recomposed": true,
+    "recomposition_reason": "bid_at_2.5x_reserve"
+  },
+  "ipfs_cid_2": "Qmb6mGcMnChPFzspa12GsRVKLDHLRXANYg8AWX3kjPHqSM",
+  "spend_tx_2": "0x428b7cea9a8c087509e587b80966657f92908973c28b3ab59b0d5239af9d8d8c",
+  "erc8183_createjob_tx": "0xba66b0c5351f8e3b2634eb49c8ac73f676c12636d0cbab799bbaaf1ac9d04ee3"
+}
