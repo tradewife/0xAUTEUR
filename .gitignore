@@ -15,8 +15,20 @@ out/
 cache/
 broadcast/
 
-# IPFS
-/tmp/
+# Demo build artifacts (keep source scripts)
+demo/node_modules/
+demo/*.mp4
+demo/*.MP4
+demo/*.mp3
+demo/*.log
+demo/*.txt
+demo/*.jpg
+demo/*.heif
+demo/shots_new/
+demo/terminal_capture/
+demo/pipeline_outputs.json
+demo/terminal_output.txt
+demo/shot_result.txt
 
 # OS
 .DS_Store
@@ -26,3 +38,7 @@ broadcast/
 # IDE
 .vscode/
 .idea/
+
+# Misc
+index.html
+dusk-till-dawn.heif
